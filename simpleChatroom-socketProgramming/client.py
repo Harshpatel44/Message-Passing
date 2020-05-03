@@ -7,21 +7,15 @@ client_id=socket.gethostbyname(client)
 print("ClientID",client_id)
 
 host=input("Enter Server IP:")
-if(host=='sagar'):
-    host="DESKTOP-JG7JSVS"
-
 port=7797
 s.connect((host, port))
-i=''
+# i=''
 while 1:
     message = s.recv(1024).decode()
-    if (message == 'exit.'):
-        print("user gave you a bye.")
-        s.close()
-        break
+
     print('message: ',message)
     a=input("reply: ")
     s.send(a.encode())
-    if (a == 'exit.'):
-        s.close()
-        break
+    # if (a == 'exit.'):
+    #     #     s.close()
+    #     #     break

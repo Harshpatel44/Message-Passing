@@ -2,6 +2,8 @@ __author__ = 'Harsh'
 import socket
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 host=socket.gethostname()
+host_id=socket.gethostbyname(host)
+print("Server_ip:",host_id)
 port=7797
 s.bind((host,port))
 s.listen(5)

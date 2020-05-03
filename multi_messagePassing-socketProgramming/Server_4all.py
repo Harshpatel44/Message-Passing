@@ -8,8 +8,8 @@ s.bind((host,port))
 conn=input("Enter no of connections:")
 s.listen(int(conn))
 
-n=["n1","n2","n3"]           #creating list for diffrent connections name
-a=["a1","a2","a3"]              #specify diffent addressses
+n=["n1","n2","n3"]           # creating list for diffrent connections name
+a=["a1","a2","a3"]           # specify different addressees
 for i in range(0,int(conn)):
     print("Join Connection:%s,%s"%(n[i],a[i]))
     (n[i],a[i])=s.accept()
